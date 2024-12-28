@@ -1,0 +1,36 @@
+<div class="episodes-container">
+    @if (loading()) {
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>Cargando episodios...</p>
+    </div>
+    }
+    @if (error()) {
+    <div class="error-container">
+        <p>{{ error() }}</p>
+        <button (click)="loadEpisodes()">Intente nuevamente</button>
+    </div>
+    }
+    <div class="episodes-grid">
+        @for (episode of episodes(); track episode.id) {
+        <app-episode-card [episode]="episode" (viewDetails)="showDetails($event)" />
+        }
+    </div>
+    @if (pagination()) {
+    <div class="pagination">
+        <button class="pagination-button" [class.disabled]="!pagination()?.prev" [disabled]="!pagination()?.prev"
+            (click)="changePage(currentPage() - 1)">
+            Previa
+        </button>
+        <span class="page-info">Página {{ currentPage() }} de {{ pagination()?.pages }}</span>
+        <button class="pagination-button" [class.disabled]="!pagination()?.next" [disabled]="!pagination()?.next"
+            (click)="changePage(currentPage() + 1)">
+            Siguiente
+        </button>
+    </div>
+    }
+</div>
+
+@if (selectedEpisode()) {
+<app-episode-details [episode]="selectedEpisode()!" (closeModal)="closeDetails()" />
+}

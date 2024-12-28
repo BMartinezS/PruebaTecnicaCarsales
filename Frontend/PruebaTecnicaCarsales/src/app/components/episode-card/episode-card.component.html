@@ -1,0 +1,15 @@
+<div class="episode-card">
+    <div class="episode-header">
+        <span class="episode-code">{{ episode.episode }}</span>
+        <h2 class="episode-title">{{ episode.name }}</h2>
+    </div>
+    <div class="episode-content">
+        <div class="info-row">
+            <span class="label">Número de personajes:</span>
+            <span class="value characters-count">{{ episode.characters.length }}</span>
+        </div>
+    </div>
+    <div class="episode-footer">
+        <button class="view-details" (click)="onViewDetails()">Ver detalles</button>
+    </div>
+</div>

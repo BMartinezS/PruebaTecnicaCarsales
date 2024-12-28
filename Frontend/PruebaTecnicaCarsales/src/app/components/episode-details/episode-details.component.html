@@ -1,0 +1,39 @@
+<div class="modal-backdrop" (click)="closeModal.emit()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        @if (loading()) {
+        <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <p>Cargando personajes...</p>
+        </div>
+        } @else if (error()) {
+        <div class="error-message">
+            {{ error() }}
+        </div>
+        } @else {
+        <div class="modal-header">
+            <h2>{{ episodeData()?.name }}</h2>
+            <p class="episode-info">{{ episodeData()?.episode }} - {{ episodeData()?.air_date }}</p>
+            <button class="close-button" (click)="closeModal.emit()">×</button>
+        </div>
+        <div class="modal-body">
+            <h3>Personajes en este episodio</h3>
+            <div class="characters-grid">
+                @for (character of characters(); track character.id) {
+                <div class="character-card">
+                    <img [src]="character.image" [alt]="character.name" class="character-image">
+                    <div class="character-info">
+                        <h4>{{ character.name }}</h4>
+                        <p><span class="status-dot" [class]="character.status.toLowerCase()"></span>
+                            {{ character.status }} - {{ character.species }}</p>
+                        <p class="location">
+                            <span>Última ubicación conocida:</span>
+                            {{ character.location.name }}
+                        </p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</div>
