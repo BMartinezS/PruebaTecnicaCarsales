@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaCarsales.API", "PruebaTecnicaCarsales.API\PruebaTecnicaCarsales.API.csproj", "{056CAEB6-115B-4888-93B5-B28A8ECA696F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaCarsales.Core", "PruebaTecnicaCarsales.Core\PruebaTecnicaCarsales.Core.csproj", "{98BCAB11-4D60-4383-B6FF-077E1BB9D6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnicaCarsales.Infrastructure", "PruebaTecnicaCarsales.Infrastructure\PruebaTecnicaCarsales.Infrastructure.csproj", "{2A844EE3-24E4-44BF-AFEC-3BC12195DBCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{056CAEB6-115B-4888-93B5-B28A8ECA696F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056CAEB6-115B-4888-93B5-B28A8ECA696F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056CAEB6-115B-4888-93B5-B28A8ECA696F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056CAEB6-115B-4888-93B5-B28A8ECA696F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BCAB11-4D60-4383-B6FF-077E1BB9D6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BCAB11-4D60-4383-B6FF-077E1BB9D6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BCAB11-4D60-4383-B6FF-077E1BB9D6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BCAB11-4D60-4383-B6FF-077E1BB9D6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A844EE3-24E4-44BF-AFEC-3BC12195DBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A844EE3-24E4-44BF-AFEC-3BC12195DBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A844EE3-24E4-44BF-AFEC-3BC12195DBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A844EE3-24E4-44BF-AFEC-3BC12195DBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
